@@ -1,131 +1,195 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;&display=swap');
+/*** Variables ***/
+:root {
+  /* colors */
+  --aqua: #4ee4be;
 
-nav{
-  color: #fff;
-  font-family: "Inter", sans-serif;
-  text-align: right;
+  --black: #000;
+  --gray-d: #333;
+  --gray: #555;
+  --gray-l: #aaa;
+  --white: #fff;
+
+  /* fonts */
+  --sans: 'Inter', sans-serif;
 }
 
+/*** Base ***/
 body {
-  background-color: #000;
-  margin: 2em auto 4em;
-  max-width: 600px;
+  background-color: var(--black);
+  display: block;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0 auto;
 }
 
-h1{
-  color: #fff;
-  font-family: "Inter", sans-serif;
+h1 {
+  color: var(--white);
+  font-family: var(--sans);
   font-size: 64px;
+  font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1;
-  font-weight: 700;
-  margin-block-start: 0.75em;
-  margin-block-end: 0.4em;
 }
 
-h2{
-  color: #4EE4BE;
-  font-family: "Inter", sans-serif;
+h2 {
+  color: var(--aqua);
+  font-family: var(--sans);
   font-size: 20px;
+  font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.4;
-  font-weight: 700;
-  margin-block-start: 0;
   margin-block-end: 0;
-}
-
-h3{
-  color: #fff;
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  letter-spacing: -0.01em;
-  line-height: 1.4;
-  font-weight: 400;
   margin-block-start: 0;
-  margin-block-end: 1em;
 }
 
-p{
-  color: #fff;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
+h3 {
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: 20px;
+  font-weight: 400;
   letter-spacing: -0.01em;
   line-height: 1.4;
+  margin-block-end: 1em;
+  margin-block-start: 0;
+}
+
+p {
+  color: var(--white);
+  font-family: var(--sans);
+  font-size: 16px;
   font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
 }
 
 a {
-  color: #fff;
-  text-decoration: none;
+  border-bottom: 1px solid var(--aqua);
+  color: var(--white);
   font-weight: 700;
-  border-bottom: 1px solid #4EE4BE;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #000;
-  background-color: #4EE4BE;
+  background-color: var(--aqua);
+  color: var(--black);
 }
 
-a.btn{
-  color: #000;
-  background-color: #4EE4BE;
+a.btn {
+  background-color: var(--aqua);
   border-radius: 5px;
-  font-family: "Inter", sans-serif;
+  color: var(--black);
+  font-family: var(--sans);
   font-size: 14px;
   font-weight: 500;
   padding: 10px 50px;
 }
 
-a.btn:hover{
-  color: #000;
-  background-color: #fff;
+a.btn:hover {
+  background-color: var(--white);
+  color: var(--black);
 }
 
 hr {
-  border: 1px solid #555555;
+  border: 1px solid var(--gray);
   margin: 3em 0;
 }
 
-input[type=email]{
-  background-color: #333;
-  border: 1px solid #555;
+input[type='email'] {
+  background-color: var(--gray-d);
   border-radius: 5px;
+  border: 1px solid var(--gray);
+  color: var(--white);
   font-size: 14px;
-  color: #fff;
-  padding: 10px;
   margin-bottom: 20px;
+  padding: 10px;
   width: 420px;
 }
 
-input[type=button],
-input[type=submit]{
-  color: #000;
-  background-color: #4EE4BE;
+input[type='button'],
+input[type='submit'] {
+  background-color: var(--aqua);
   border-radius: 5px;
   border: none;
-  font-family: "Inter", sans-serif;
+  color: var(--black);
+  font-family: var(--sans);
   font-size: 14px;
   font-weight: 500;
   padding: 10px 50px;
 }
 
-input[type=button],
-input[type=submit]:hover{
-  color: #000;
-  background-color: #fff;
+input[type='button'],
+input[type='submit']:hover {
+  background-color: var(--white);
   border: 0;
+  color: var(--black);
 }
 
-footer{
-  margin: 6em 0 0;
-  color: #aaa;
-  font-family: "Inter", sans-serif;
+footer {
+  color: var(--gray-l);
+  font-family: var(--sans);
   font-size: 12px;
   font-weight: 400;
+  margin: 6em 0 0;
   text-align: left;
 }
 
-footer a{
-  font-weight: 400;
+footer a {
   border: 0;
+  font-weight: 400;
+}
+
+/*** Section Logo ***/
+.logo {
+  background-color: var(--white);
+  display: block;
+  height: 215px;
+}
+
+/*** Section Body ***/
+.body {
+  box-sizing: border-box;
+  height: auto;
+  padding: 110px 120px;
+  position: relative;
+}
+
+.body__contact {
+  color: var(--white);
+  display: block;
+  font-family: var(--sans);
+  text-align: center;
+}
+
+#mc_embed_signup {
+  background: #000;
+  clear: left;
+  font-size: 14px;
+  font-family: var(--sans);
+}
+
+#mc_embed_signup form {
+  padding: 10px 0
+}
+
+/*** Media Queries ***/
+@media screen and (min-width: 750px) {
+  body {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .logo {
+    height: 100%;
+    flex-basis: 50%;
+  }
+
+  .body {
+    flex-basis: 50%;
+  }
+
+  .body__contact {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+  }
 }
