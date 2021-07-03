@@ -93,6 +93,7 @@ a.btn {
   font-size: 14px;
   font-weight: 500;
   padding: 10px 50px;
+  min-width: 200px;
 }
 
 a.btn:hover {
@@ -172,6 +173,8 @@ footer a {
   font-size: 14px;
   font-weight: 500;
   padding: 10px 50px;
+  min-height: 36px;
+  min-width: 200px
 }
 
 #mc_embed_signup input.button:hover {
