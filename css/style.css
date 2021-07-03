@@ -92,7 +92,7 @@ a.btn {
   font-family: var(--sans);
   font-size: 14px;
   font-weight: 500;
-  min-height: 38px;
+  padding: 10px 50px;
   min-width: 200px;
 }
 
