@@ -200,6 +200,7 @@ footer .type {
 }
 
 .connect-update {
+  color: var(--gray-l);
   text-align: left;
   margin-bottom: 115px;
   line-height: 2;
@@ -207,6 +208,12 @@ footer .type {
 
 .connect-update .bullet{
   color: var(--aqua);
+}
+
+.connect-update a{
+  color: var(--white);
+  text-decoration: none;
+  border: 0;
 }
 
 .body__contact {
