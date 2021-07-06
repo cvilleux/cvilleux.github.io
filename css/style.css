@@ -216,6 +216,10 @@ footer .type {
   border: 0;
 }
 
+.connect-update a:hover{
+  color: var(--black);
+}
+
 .body__contact {
   color: var(--aqua);
   display: block;
