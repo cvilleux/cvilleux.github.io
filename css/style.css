@@ -199,8 +199,8 @@ footer .type {
   color: var(--black);
 }
 
-.twitter-update {
-  text-align: center;
+.connect-update {
+  text-align: left;
   margin-bottom: 115px;
   line-height: 1.66;
 }
