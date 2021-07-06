@@ -205,6 +205,10 @@ footer .type {
   line-height: 2;
 }
 
+.connect-update .bullet{
+  color: var(--aqua);
+}
+
 .body__contact {
   color: var(--aqua);
   display: block;
