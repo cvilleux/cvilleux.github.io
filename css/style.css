@@ -206,8 +206,12 @@ footer .type {
   line-height: 2;
 }
 
-.connect-update .bullet{
+.connect-update li{
   color: var(--aqua);
+}
+
+.connect-update li span {
+  color: var(--gray-l);
 }
 
 .connect-update a{
