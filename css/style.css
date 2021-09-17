@@ -80,13 +80,16 @@ footer .type {
   background-color: var(--white);
   display: block;
   height: 215px;
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
 }
 
 /*** Section Body ***/
 .body {
   box-sizing: border-box;
   height: auto;
-  padding: 35px 25px;
+  padding: 250px 25px 35px 25px;
   position: relative;
 }
 
@@ -206,7 +209,7 @@ footer .type {
   line-height: 2;
 }
 
-.connect-update li{
+.connect-update li {
   color: var(--aqua);
 }
 
@@ -214,13 +217,13 @@ footer .type {
   color: var(--gray-l);
 }
 
-.connect-update a{
+.connect-update a {
   color: var(--white);
   text-decoration: none;
   border: 0;
 }
 
-.connect-update a:hover{
+.connect-update a:hover {
   color: var(--black);
 }
 
@@ -243,12 +246,18 @@ footer .type {
   .logo {
     height: 100%;
     flex-basis: 50%;
+    width: 50vw;
   }
 
   /*** Section Body ***/
   .body {
     flex-basis: 50%;
+    width: 50vw;
     padding: 110px 120px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50vw;
   }
 
   .body__headline {
@@ -262,5 +271,4 @@ footer .type {
     top: 30px;
     right: 40px;
   }
-
 }
