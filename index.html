@@ -53,115 +53,116 @@
   </head>
 
   <body>
-    <section class="logo">
-      <span>Placeholder</span>
-    </section>
-
-    <section class="body">
-      <h1 class="body__headline">
-        Five folks talking about UX for five minutes each.
-      </h1>
-      <div class="body__description">
-        <p>
-          Cville UX is a free event for folks interested in user experience
-          design in Charlottesville, VA area. The format is simple: short talks
-          followed by a structured Q&amp;A. Grab a chair, a beverage, and join
-          us!
-        </p>
-      </div>
-
-      <div class="body__register">
-        <h2 class="subhead">Free Online Event</h2>
-        <h3 class="event-date">
-          Tuesday, September 15, 2021<br />
-          8:00 PM – 9:00 PM EDT
-        </h3>
-
-        <a
-          href="https://www.eventbrite.com/e/148348264653"
-          class="btn btn__register"
-          >Register</a
-        >
-      </div>
-
-      <hr />
-
-      <!-- Begin Mailchimp Signup Form -->
-      <div class="body__updates">
-        <h2 class="subhead">Event Updates</h2>
-        <p class="updates__description">
-          Get information about this event in your inbox, no funny business.
-        </p>
-
-        <div id="mc_embed_signup">
-          <form
-            action="https://cvilleux.us1.list-manage.com/subscribe/post?u=5e15aefd7f8b0b75d0997c8ef&amp;id=f710d1c9b8"
-            method="post"
-            id="mc-embedded-subscribe-form"
-            name="mc-embedded-subscribe-form"
-            class="validate"
-            target="_blank"
-            novalidate
-          >
-            <div id="mc_embed_signup_scroll">
-              <label for="EMAIL">Email Address</label>
-              <input
-                type="email"
-                value=""
-                name="EMAIL"
-                class="email"
-                id="mce-EMAIL"
-                placeholder="email address"
-                required
-              />
-              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px" aria-hidden="true">
-                <input
-                  type="text"
-                  name="b_5e15aefd7f8b0b75d0997c8ef_f710d1c9b8"
-                  tabindex="-1"
-                  value=""
-                />
-              </div>
-              <div class="clear">
-                <input
-                  type="submit"
-                  value="Subscribe"
-                  name="subscribe"
-                  id="mc-embedded-subscribe"
-                  class="button"
-                />
-              </div>
-            </div>
-          </form>
+    <div class="body-wrap">
+      <header class="logo">
+        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><rect fill="#4EE4BE" width="300" height="300" rx="20"/><path d="M171.06 121.44h13.292V65.65H171.06v55.79Zm-58.169 35.484c-1.535 0-2.775.776-3.721 2.33-.946 1.552-1.425 3.934-1.434 7.147-.01 3.28.46 5.71 1.412 7.293.95 1.58 2.198 2.372 3.743 2.372 1.555 0 2.807-.791 3.759-2.372.95-1.583 1.42-4.013 1.411-7.293-.01-3.213-.488-5.595-1.434-7.148s-2.19-2.33-3.736-2.33Zm124.741-60.928c-.018-2.142-.738-3.9-2.16-5.27-1.423-1.372-3.23-2.058-5.423-2.058-2.212 0-4.055.7-5.532 2.098-1.477 1.399-2.26 3.143-2.35 5.23h15.465ZM250 100.409v3.324h-27.834v.353c0 2.56.738 4.623 2.215 6.185 1.477 1.561 3.493 2.342 6.048 2.342 1.74 0 3.253-.368 4.54-1.104 1.286-.735 2.183-1.793 2.69-3.173l12.206.354c-.762 4.104-2.864 7.387-6.307 9.848-3.443 2.46-7.9 3.69-13.373 3.69-6.56 0-11.72-1.915-15.48-5.747-3.761-3.831-5.64-9.098-5.64-15.799 0-4.322.85-8.104 2.554-11.346 1.704-3.241 4.105-5.765 7.204-7.573 3.099-1.806 6.75-2.71 10.954-2.71 3.95 0 7.448.823 10.492 2.465 3.044 1.643 5.427 4.054 7.149 7.233 1.721 3.177 2.582 7.064 2.582 11.658Zm-124.568 65.992c.01-3.251-.492-6.018-1.506-8.301-1.013-2.284-2.46-4.022-4.337-5.218-1.878-1.195-4.11-1.792-6.698-1.792-3.88 0-6.937 1.33-9.167 3.99-2.23 2.662-3.35 6.435-3.36 11.32-.009 3.261.49 6.05 1.5 8.367 1.008 2.318 2.451 4.093 4.33 5.327 1.877 1.233 4.11 1.85 6.697 1.85 2.588 0 4.818-.613 6.69-1.836 1.874-1.224 3.317-2.997 4.33-5.319 1.014-2.322 1.521-5.118 1.521-8.388Zm-1.404 45.353h-12.02v-.188l3.547-3.28c2.144-1.877 3.802-3.49 4.975-4.84 1.173-1.35 1.989-2.578 2.447-3.686a8.714 8.714 0 0 0 .688-3.36c0-1.79-.456-3.357-1.369-4.702-.912-1.345-2.198-2.395-3.859-3.149-1.66-.755-3.615-1.132-5.865-1.132-2.182 0-4.096.398-5.741 1.197-1.646.798-2.924 1.933-3.83 3.403-.909 1.471-1.362 3.217-1.362 5.24h6.792c0-1.345.378-2.388 1.136-3.128.758-.74 1.75-1.11 2.976-1.11 1.207 0 2.204.35 2.991 1.052.787.701 1.18 1.666 1.18 2.895a4.765 4.765 0 0 1-1 2.975c-.666.871-1.607 1.853-2.823 2.946l-10.818 9.492v5.166h21.955v-5.79Zm-25.005 0h-12.02v-.188l3.549-3.28c2.142-1.877 3.8-3.49 4.974-4.84 1.173-1.35 1.989-2.578 2.448-3.686a8.721 8.721 0 0 0 .687-3.36c0-1.79-.456-3.357-1.368-4.702-.912-1.345-2.2-2.395-3.86-3.149-1.66-.755-3.615-1.132-5.865-1.132-2.182 0-4.096.398-5.742 1.197-1.646.798-2.922 1.933-3.83 3.403-.907 1.471-1.361 3.217-1.361 5.24h6.792c0-1.345.378-2.388 1.136-3.128.758-.74 1.75-1.11 2.976-1.11 1.207 0 2.204.35 2.991 1.052.787.701 1.18 1.666 1.18 2.895a4.768 4.768 0 0 1-1 2.975c-.665.871-1.606 1.853-2.823 2.946l-10.818 9.492v5.166h21.954v-5.79Zm-8.76-51.115a4.768 4.768 0 0 1-1 2.975c-.666.871-1.608 1.853-2.824 2.947l-10.817 9.49v5.167h21.953v-5.79h-12.02v-.189l3.549-3.28c2.143-1.877 3.801-3.49 4.974-4.84 1.173-1.35 1.989-2.578 2.448-3.686a8.713 8.713 0 0 0 .687-3.36c0-1.79-.455-3.357-1.368-4.702-.912-1.345-2.199-2.394-3.86-3.149-1.66-.754-3.615-1.132-5.864-1.132-2.182 0-4.096.398-5.743 1.197-1.646.798-2.922 1.933-3.83 3.403-.907 1.471-1.36 3.217-1.36 5.24h6.79c0-1.345.38-2.388 1.138-3.128.757-.74 1.75-1.11 2.976-1.11 1.206 0 2.203.35 2.99 1.052.787.702 1.18 1.666 1.18 2.895Zm59.826-22.765.046.046v50.017c0 27.649-22.366 50.063-49.956 50.063-27.59 0-49.956-22.414-49.956-50.063v-50.063h99.866Zm.046 0v.046l49.91 50.017L250 137.874h-99.865Zm40.73-16.435h13.291V65.651h-13.292v55.788Zm-57.102 0 14.325-41.842h-13.999l-7.72 28.821h-.435l-7.692-28.82h-13.998l14.297 41.841h15.222Zm24.153-46.717c1.885 0 3.493-.622 4.825-1.867 1.332-1.243 1.998-2.746 1.998-4.508 0-1.76-.666-3.26-1.998-4.494-1.332-1.235-2.94-1.853-4.825-1.853-1.867 0-3.47.618-4.811 1.853-1.341 1.235-2.011 2.733-2.011 4.494 0 1.762.67 3.265 2.01 4.508 1.342 1.245 2.945 1.867 4.812 1.867Zm-6.66 46.717h13.293V79.598h-13.293v41.841ZM250 238l-49.956-50.063L150.09 238H250ZM53.452 109.126C51.151 104.86 50 99.665 50 93.545c0-6.157 1.169-11.364 3.507-15.622 2.337-4.258 5.5-7.497 9.486-9.712 3.986-2.215 8.454-3.323 13.4-3.323 4.495 0 8.518.822 12.07 2.466 3.55 1.643 6.437 4.027 8.657 7.15 2.22 3.124 3.556 6.91 4.01 11.36H87.537c-.344-2.798-1.463-5.022-3.357-6.675-1.894-1.652-4.372-2.478-7.434-2.478-4.06 0-7.244 1.475-9.555 4.426-2.31 2.952-3.465 7.087-3.465 12.408 0 5.54 1.164 9.73 3.493 12.57 2.329 2.844 5.477 4.264 9.446 4.264 2.953 0 5.386-.753 7.298-2.26 1.912-1.508 3.103-3.606 3.574-6.293l13.591.081c-.254 2.471-.97 4.908-2.147 7.315-1.178 2.405-2.805 4.585-4.88 6.537-2.075 1.953-4.589 3.514-7.542 4.685-2.954 1.172-6.343 1.758-10.166 1.758-5.038 0-9.546-1.112-13.523-3.337-3.978-2.225-7.118-5.471-9.419-9.739Z" fill="#000"/></g></svg>
+      </header>
+  
+      <main class="body">
+        <h1 class="body__headline">
+          Five folks talking about UX for five minutes each.
+        </h1>
+        <div class="body__description">
+          <p>
+            Cville UX is a free event for folks interested in user experience design in Charlottesville, VA area. The format is simple: short talks followed by a structured Q&A. Grab a chair, a beverage, and join us!
+          </p>
         </div>
-
+  
+        <div class="body__register">
+          <h2>Event Details TBA</h2>
+          <h3>Subscribe below for updates</h3>
+  
+          <!-- <h3>
+            Tuesday, September 15, 2021<br />
+            8:00 PM – 9:00 PM EDT
+          </h3> -->
+  
+          <div id="mc_embed_signup">
+            <form
+              action="https://cvilleux.us1.list-manage.com/subscribe/post?u=5e15aefd7f8b0b75d0997c8ef&amp;id=f710d1c9b8"
+              method="post"
+              id="mc-embedded-subscribe-form"
+              name="mc-embedded-subscribe-form"
+              class="validate"
+              target="_blank"
+              novalidate
+            >
+              <div id="mc_embed_signup_scroll">
+                <label for="EMAIL">Email Address</label>
+                <div class="email-container">
+                  <input
+                    type="email"
+                    value=""
+                    name="EMAIL"
+                    class="email"
+                    id="mce-EMAIL"
+                    placeholder="email address"
+                    required
+                  />
+                  <span class="bottom"></span>
+                  <span class="right"></span>
+                  <span class="top"></span>
+                  <span class="left"></span>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px" aria-hidden="true">
+                  <input
+                    type="text"
+                    name="b_5e15aefd7f8b0b75d0997c8ef_f710d1c9b8"
+                    tabindex="-1"
+                    value=""
+                  />
+                </div>
+                <div class="clear">
+                  <input
+                    type="submit"
+                    value="Subscribe"
+                    name="subscribe"
+                    id="mc-embedded-subscribe"
+                    class="btn"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+  
         <hr />
-
-        <h2 class="subhead">Ways to Connect</h2>
-        <ul class="connect-update">
-            <li><span>Follow <a href="https://twitter.com/CvilleUx">@CvilleUX</a> for the occasional tweet.</span></li>
-            <li><span>Connect with the event organizer, <a href="https://jeremydcherry.com">Jeremy Cherry</a>.</span></li>
-            <li><span><a href="https://forms.gle/7gXnxF7LR7gSkdBU7">Submit a talk idea</a> if you'd like to speak at the event.</span></li>
-        </ul>
-      </div>
-
-      <span class="body__contact"
-        >&bull;&nbsp;<a href="mailto:info@cvilleux.com">Contact</a></span
+  
+        <div class="body__connect">
+          <h2>Ways to Connect</h2>
+          <ul class="contact-list">
+            <li>
+              <span
+                >Follow <a href="https://twitter.com/CvilleUx">@CvilleUX</a> for
+                the occasional tweet.</span
+              >
+            </li>
+            <li>
+              <span
+                >Connect with the event organizer,
+                <a href="https://jeremydcherry.com">Jeremy Cherry</a>.</span
+              >
+            </li>
+          </ul>
+        </div>
+  
+        <div class="body__contact">
+          <a href="mailto:info@cvilleux.com" class="btn">Contact</a>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <span class="type">
+        Typeset in
+        <a href="https://fonts.google.com/specimen/Inter">Inter</a></span
+      ><span class="license"
+        >&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;License
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+          >CC BY-NC-ND</a
+        ></span
       >
-
-      <footer>
-        <span class="type">
-          Typeset in
-          <a href="https://fonts.google.com/specimen/Inter">Inter</a></span
-        ><span class="license"
-          >&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;License
-          <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
-            >CC BY-NC-ND</a
-          ></span
-        >
-      </footer>
-    </section>
+    </footer>
     <script src="js/app.js"></script>
   </body>
 </html>

@@ -2,6 +2,7 @@
 :root {
   /* colors */
   --aqua: #4ee4be;
+  --blue: #1162f0;
 
   --black: #000;
   --gray-d: #333;
@@ -17,8 +18,8 @@ body {
   background-color: var(--black);
   display: block;
   flex-direction: column;
-  height: 100vh;
   margin: 0 auto;
+  padding: 40px 25px;
 }
 
 a {
@@ -34,31 +35,41 @@ a:hover {
 }
 
 a.btn {
+  align-items: center;
   background-color: var(--aqua);
   border-radius: 5px;
   color: var(--black);
+  display: flex;
   font-family: var(--sans);
   font-size: 14px;
   font-weight: 500;
+  justify-content: center;
   padding: 10px 50px;
   min-width: 200px;
+  min-height: 40px;
+  transition: all 0.2s ease-in;
 }
 
-a.btn:hover {
+a.btn:hover,
+a.btn:focus {
   background-color: var(--white);
   color: var(--black);
 }
 
 hr {
-  border: 1px solid var(--gray);
+  border: none;
+  border-bottom: 1px solid var(--gray);
   margin: 30px 0;
 }
 
 footer {
+  align-items: center;
   color: var(--gray-l);
+  display: flex;
   font-family: var(--sans);
   font-size: 12px;
   font-weight: 400;
+  justify-content: center;
   text-align: left;
 }
 
@@ -77,20 +88,25 @@ footer .type {
 
 /*** Section Logo ***/
 .logo {
-  background-color: var(--white);
-  display: block;
-  height: 215px;
-  position: fixed;
-  width: 100vw;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
   z-index: 10;
+}
+
+.logo svg {
+  max-height: 150px;
+  max-width: 150px;
 }
 
 /*** Section Body ***/
 .body {
   box-sizing: border-box;
   height: auto;
-  padding: 250px 25px 35px 25px;
-  position: relative;
+  max-width: 550px;
+  margin: 0 auto 20px;
+  text-align: center;
 }
 
 .body__headline {
@@ -120,8 +136,11 @@ footer .type {
   width: 100%;
 }
 
-.subhead {
-  margin-bottom: 15px;
+.body__register {
+  margin-bottom: 30px;
+}
+
+.body__register h2 {
   color: var(--aqua);
   font-family: var(--sans);
   font-size: 20px;
@@ -130,7 +149,7 @@ footer .type {
   line-height: 1.4;
 }
 
-.event-date {
+.body__register h3 {
   line-height: 30px;
   color: var(--white);
   font-family: var(--sans);
@@ -141,25 +160,16 @@ footer .type {
   margin-block-start: 0;
 }
 
-.updates__description {
-  color: var(--white);
-  font-family: var(--sans);
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  line-height: 1.62;
-  margin-bottom: 20px;
-}
-
 #mc_embed_signup {
   background: #000;
   clear: left;
   font-size: 14px;
   font-family: var(--sans);
+  text-align: left;
 }
 
 #mc_embed_signup form {
-  padding: 10px 0 40px 0;
+  padding: 10px 0 0;
 }
 
 #mc_embed_signup label {
@@ -169,6 +179,10 @@ footer .type {
   line-height: 16px;
 }
 
+#mc_embed_signup .email-container {
+  position: relative;
+}
+
 #mc_embed_signup input.email {
   background-color: var(--gray-d);
   border-radius: 5px;
@@ -176,12 +190,83 @@ footer .type {
   border: 1px solid var(--gray);
   color: var(--white);
   font-size: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding: 10px;
   width: 100%;
+  transition: background-color 0.3s ease-in-out;
 }
 
-#mc_embed_signup input.button {
+#mc_embed_signup input.email:focus {
+  outline: none;
+}
+
+#mc_embed_signup input.email::placeholder {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+#mc_embed_signup .email-container span {
+  position: absolute;
+  background-color: var(--aqua);
+  transition: transform 0.5s ease;
+}
+
+.email-container .bottom,
+.email-container .top {
+  height: 1px;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+}
+
+.email-container .left,
+.email-container .right {
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  transform: scaleY(0);
+}
+
+.email-container .bottom {
+  bottom: 0;
+  transform-origin: bottom right;
+}
+
+#mc_embed_signup input.email:focus ~ .bottom {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.email-container .right {
+  right: 0;
+  transform-origin: top right;
+}
+
+#mc_embed_signup input.email:focus ~ .right {
+  transform-origin: bottom right;
+  transform: scaleY(1);
+}
+
+.email-container .top {
+  top: 0;
+  transform-origin: top left;
+}
+
+#mc_embed_signup input.email:focus ~ .top {
+  transform-origin: top right;
+  transform: scaleX(1);
+}
+
+.email-container .left {
+  left: 0;
+  transform-origin: bottom left;
+}
+
+#mc_embed_signup input.email:focus ~ .left {
+  transform-origin: top left;
+  transform: scaleY(1);
+}
+
+#mc_embed_signup input.btn {
   background-color: var(--aqua);
   border-radius: 5px;
   border: none;
@@ -194,36 +279,49 @@ footer .type {
   min-height: 38px;
   min-width: 200px;
   width: 100%;
+  transition: all 0.2s ease-in;
 }
 
-#mc_embed_signup input.button:hover {
+#mc_embed_signup input.btn:hover {
   background-color: var(--white);
   border: 0;
+  cursor: pointer;
   color: var(--black);
 }
 
-.connect-update {
-  color: var(--gray-l);
-  text-align: left;
-  margin-bottom: 115px;
-  line-height: 2;
+.body__connect {
+  margin-bottom: 35px;
 }
 
-.connect-update li {
+.body__connect h2 {
   color: var(--aqua);
+  text-align: left;
+  margin-bottom: 15px;
 }
 
-.connect-update li span {
+.contact-list {
+  color: var(--gray-l);
+  line-height: 1.25;
+  padding-left: 15px;
+  text-align: left;
+}
+
+.contact-list li {
+  color: var(--aqua);
+  margin-bottom: 10px;
+}
+
+.contact-list li span {
   color: var(--gray-l);
 }
 
-.connect-update a {
+.contact-list a {
   color: var(--white);
   text-decoration: none;
   border: 0;
 }
 
-.connect-update a:hover {
+.contact-list a:hover {
   color: var(--black);
 }
 
@@ -235,33 +333,55 @@ footer .type {
   margin-bottom: 25px;
 }
 
+.body__contact a {
+  background: transparent;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  color: var(--white);
+  font-weight: 400;
+  text-decoration: none;
+  width: 100%;
+}
+
+.body__contact a:hover,
+.body__contact a:focus {
+  background: var(--white);
+  color: var(--black);
+}
+
 /*** Media Queries ***/
 @media screen and (min-width: 750px) {
   body {
     display: flex;
+    flex-direction: column;
+    padding: 110px 60px 30px;
+    height: 100vh;
+  }
+
+  .body-wrap {
+    display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+    max-width: 950px;
+    margin: 0 auto;
   }
 
   /*** Section Logo ***/
   .logo {
     height: 100%;
-    flex-basis: 50%;
-    width: 50vw;
+    flex: 1 0 auto;
   }
 
   /*** Section Body ***/
   .body {
-    flex-basis: 50%;
-    width: 50vw;
-    padding: 110px 120px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50vw;
+    flex: 2;
+    text-align: left;
+    max-width: 100%;
   }
 
   .body__headline {
-    font-size: 64px;
+    font-size: 40px;
     letter-spacing: -0.01em;
     line-height: 1;
   }
@@ -270,5 +390,37 @@ footer .type {
     position: absolute;
     top: 30px;
     right: 40px;
+  }
+
+  #mc_embed_signup .email-container {
+    max-width: 350px;
+  }
+
+  #mc_embed_signup input.btn {
+    max-width: 200px;
+  }
+
+  footer {
+    margin-top: auto;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  body {
+    column-gap: 100px;
+    padding: 110px 120px 30px;
+  }
+
+  .logo svg {
+    max-height: 300px;
+    max-width: 300px;
+  }
+
+  .body-wrap {
+    gap: 100px;
+  }
+
+  .body__headline {
+    font-size: 64px;
   }
 }
